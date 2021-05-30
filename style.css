@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Permanent Marker', monospace;
+    src: url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+  }
+ 
+
+
+
+
+
+
+
+header {
+    min-width: 100%;
+    min-height: 100%;
+    padding: 10px 0;
+    height: 170px;
+    width: 100%;
+    background-image: linear-gradient(-45deg, #03071e 10%, #9D0208 , #E85D04, #FFBA08);
+    /*
+    background-image: radial-gradient(circle at right, #03071E 30%, #9D0208 20%, #E85D04 60%, #FFBA08 80%);
+    */
+}
+
+h1 {
+    font-family: 'Permanent Marker', monospace;
+    font-size: 30px;
+    font-weight: 300;
+    padding-left: 5%;   
+    margin-top: 5px; 
+    /* 
+    text-shadow: -3px 3px 3px #03071E; 
+    */
+    color: #03071E;
+}
+
+h3 {
+    font-family: 'Permanent Marker', monospace;
+    font-weight: 300;
+    font-size: 20px;
+    padding-left: 10%;
+    color: #03071E;    
+}
+
+body {
+    background: #F48C06;
+    margin: 0;
+}

@@ -4,25 +4,35 @@
   }
  
 
-/*
-box-sizing: border-box;
-*/
+* {
+    box-sizing: border-box;
+}
 
 
 
 
-
-
-
-
-
+body {    
+    box-shadow:
+		inset #ffba08 0 0 0 5px,
+		inset #faa307 0 0 0 1px,
+		inset #f48c06 0 0 0 10px,
+		inset #e85d04 0 0 0 11px,
+		inset #dc2f02 0 0 0 16px,
+		inset #d00000 0 0 0 17px,
+		inset #9d0208 0 0 0 22px,
+		inset #6a040f 0 0 0 23px,
+        inset #370617 0 0 0 28px,
+		inset #03071e 0 0 0 29px;        
+    padding: 40px;  
+    background: #03071e;
+}
 
 
 
 header {
     max-width: 100%;    
     max-height: auto;
-    background: wheat;
+    background-color: wheat;
     
 }
 
@@ -32,36 +42,10 @@ img {
 }
 
 
-
-/* .logo1 {     
-    max-width: 100%; 
-    max-height: 100%;
-    flex-grow: 1;
-    object-fit: contain;  
-} */
-
 p {
     margin: 0;
 }
-/* img {
-	max-width: 100%;
-	max-height: 100%;
-} */
 
-.hr-tape {
-    border: 0;
-    margin: 0;
-    height: 40px;
-    width: 100%;
-    background-image: url(../img/adhesive-white.png)
-    
-}
-.blurb-border-tape {
-    height: 20px;
-    margin: -5px 40px;
-    background-image: url(../img/tape-size-1.png)
-    
-}
 
 h1 {
     font-family: 'Permanent Marker', monospace;
@@ -87,10 +71,6 @@ h4 {
     margin: 0;
 }
 
-body {
-    margin: 0;
-    background-image: url(../img/table-background.jpg)
-}
 
 .blurb {
     font-family: 'Permanent Marker', monospace;
@@ -98,21 +78,6 @@ body {
     background-image: url(../img/grid-background.jpg);
     padding: 20px;
 }
-
-hr {
-    /*
-    border: 5px dashed #CED8F7;
-    background-color: #3057E1;
-    border-radius: 180;
-    */
-    
-    
-    
-    
-}
-
-
-
 
 
 

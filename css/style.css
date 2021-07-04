@@ -4,13 +4,13 @@
   } */
 
   @font-face {
-    font-family: 'albas', monospace;
-    src: url("../ttf/ALBAS___.TTF") format("ttf");
+    font-family: 'Alba Super', monospace;
+    src: url("../ttf/ALBAS___.TTF");
   }
   
   @font-face {
     font-family: 'Keep on Truckin';
-    src: url("../ttf/KEEPT___.TTF") format("ttf");
+    src: url("../ttf/KEEPT___.TTF");
   }
  
   @font-face {
@@ -31,6 +31,43 @@
     box-sizing: border-box;
 }
 
+.buttonDiv {
+    display: flex;
+}
+
+.searchButton {
+    font-size: 24px;
+    height: 75px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #fee3f6;
+    font-family: 'Alba Super', monospace;    
+    transition-duration: 0.4s;
+    padding: 0%;
+    border: none;
+}
+
+.addButton {
+    font-size: 24px;
+    height: 75px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #fee3f6;
+    font-family: 'Alba Super', monospace;    
+    transition-duration: 0.4s;
+    padding:0%;
+    border: none;
+}
+
+  
+.searchButton:hover {    
+    font-size: 200%;    
+}
+
+.addButton:hover {    
+    font-size: 200%;
+}
+
 
 
 
@@ -48,6 +85,7 @@ body {
 		inset #03071e 0 0 0 29px;        
     padding: 40px;  
     background: #03071e;
+    
 }
 
 
@@ -103,19 +141,27 @@ h4 {
     padding: 20px;
 }
 
+summary {
+    font-family: 'Alba Super', monospace;
+    font-size: 24px;
+}
+
+
 details {
-   
+    /* font-family: 'Alba Super', monospace; */
     margin: 20px 40px;
-    background-image: url(../img/grid-background.jpg);
+    /* background-image: url(../img/grid-background.jpg); */
+    background-color: #fee3f6;
     padding: 20px;
     border-radius: 10px;
     
 }
 
 details p {
-    font-family: 'Keep on Truckin';
+    font-family: 'Keep on Truckin', monospace;
     margin: 20px 10px 10px 10px;
     font-size: 24px;
+    letter-spacing: 2px;
 }
 
 .summary-line {

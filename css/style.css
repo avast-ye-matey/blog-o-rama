@@ -1,8 +1,31 @@
-@font-face {
+/* @font-face {
     font-family: 'Permanent Marker', monospace;
     src: url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+  } */
+
+  @font-face {
+    font-family: 'albas', monospace;
+    src: url("../ttf/ALBAS___.TTF") format("ttf");
+  }
+  
+  @font-face {
+    font-family: 'Keep on Truckin';
+    src: url("../ttf/KEEPT___.TTF") format("ttf");
   }
  
+  @font-face {
+    font-family: 'albas2', monospace;
+    src: url("../ttf/albas___-webfont.woff");
+  }
+
+  @font-face {
+    font-family: 'alba_superregular';
+    src: url('albas___-webfont.woff2') format('woff2'),
+         url('albas___-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 * {
     box-sizing: border-box;
@@ -44,6 +67,7 @@ img {
 
 p {
     margin: 0;
+    
 }
 
 
@@ -77,6 +101,27 @@ h4 {
     margin: 0 40px;
     background-image: url(../img/grid-background.jpg);
     padding: 20px;
+}
+
+details {
+   
+    margin: 20px 40px;
+    background-image: url(../img/grid-background.jpg);
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+details p {
+    font-family: 'Keep on Truckin';
+    margin: 20px 10px 10px 10px;
+    font-size: 24px;
+}
+
+.summary-line {
+    background: linear-gradient(to right, red, yellow);
+    height: 5px;
+    border: none;
 }
 
 

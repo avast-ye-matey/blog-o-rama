@@ -83,13 +83,31 @@
         <button class="addButton" id="addButton" type="button">Add</button>
     </div>
 
-    <form id="searchBar" role="search" style="display:none;" onsubmit="submitSearch()">
+    <form id="searchBar" class="searchBarClass" role="search" style="display:none;" onsubmit="submitSearch()">
         <input type="search" id="query" name="q"
          placeholder="Search..."
          aria-label="Search through site content">
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
 
+    <hr style="border: 5px dashed #CED8F7;">
+
+
+
+    <div>    
+        <form id="addForm" class="addFormClass">
+
+            <label for="Title">Title:</label> <!-- add autofind date -->
+            <input type="text" id="title" name="title">
+
+            <label for="Blogtext">Whatcha Wanna Blog?!:</label>
+            <input type="text" id="blog-text" name="blogtext">
+
+            <input class="addFormButton" type="button" value="Add Blog Post">
+
+        </form>
+    </div>
+  
     
 
 
@@ -140,6 +158,9 @@
         <hr class="summary-line"> 
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     </details>
+
+
+    
 
 
 

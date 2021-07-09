@@ -9,183 +9,144 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> -->
+    
     <title>Document</title>
     
 </head>
 
-
-
     <hr style="border: 5px dashed #CED8F7;">
     
-<body>
-    <header class="header">
+    <body>
+
+        <header class="header">   
         
-    
-    
-    
-        <!-- <div class="logo">
-            <img class="logo1" src="img/burnt-title-background.png">
-                <h1>My Totally Rad Blog-o-sphere</h1>
-            <h3>Memory Bookmarks &</h3>
-            <h3>My Brain's Splash-page!!</h3>            
-        </div> -->
+        
+        </header>
 
-        <!-- <div class="nav-button">
-            <img src="img/nav-button-header.png">
-        </div> -->
-
-
-
-        <!-- <div class="top-navigation">
-            <nav>
-                <ul>
-                    <li><a href="#">Add</a></li>
-                    <li><a href="#">Search</a></li>
-                </ul>
-            </nav>
-        </div>    -->
-    
-    
+ <!--  
             
-    
-    
+    ADD AND SEARCH BUTTONS
+    SEARCH BAR    
         
-    </header>
+-->
+        
 
+            <div class="buttonDiv">
+                <button class="searchButton" id="searchButton" type="button">Search</button>        
+                <button class="addButton" id="addButton" type="button">Add</button>
+            </div>
 
+            
+            <form id="searchBar" class="searchBarClass" role="search" style="display:none;" onsubmit="submitSearch()">
+                <input type="search" id="query" name="q"
+                placeholder="Search..."
+                aria-label="Search through site content">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        
+        
 
+        <hr style="border: 5px dashed #CED8F7;">
 
+ <!--  
+            
+    HTML ADD FORM        
+        
+-->
 
-    <!-- <hr style="border: 5px dashed #CED8F7;">
- -->
+            <div class="addFormClassDiv">    
+                <form id="addForm" class="addFormClass">
 
+                    <label for="Title">Title:</label> <!-- add autofind date -->
+                    <input type="text" id="title" name="title">
 
+                    <label for="Blogtext">Whatcha Wanna Blog?!:</label>
+                    <input type="text" id="blog-text" name="blogtext">
 
-   <!--  <button class="accordion">Section 1</button>
-        <div class="panel">
-            <p>Lorem ipsum...</p>
-        </div>
+                    <div id="formButton">
+                        <input class="addFormButton" type="button" value="Add Blog Post" >
+                    </div>
 
-    <button class="accordion">Section 2</button>
-        <div class="panel">
-            <p>Lorem ipsum...</p>
-        </div>
+                </form>
+            </div>
+        
 
-    <button class="accordion">Section 3</button>
-        <div class="panel">
-            <p>Lorem ipsum...</p>
-        </div>
- -->
-
-    <div class="buttonDiv">
-        <button class="searchButton" id="searchButton" type="button">Search</button>        
-        <button class="addButton" id="addButton" type="button">Add</button>
-    </div>
-
-    <form id="searchBar" class="searchBarClass" role="search" style="display:none;" onsubmit="submitSearch()">
-        <input type="search" id="query" name="q"
-         placeholder="Search..."
-         aria-label="Search through site content">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-
-    <hr style="border: 5px dashed #CED8F7;">
-
-
-
-    <div>    
-        <form id="addForm" class="addFormClass">
-
-            <label for="Title">Title:</label> <!-- add autofind date -->
-            <input type="text" id="title" name="title">
-
-            <label for="Blogtext">Whatcha Wanna Blog?!:</label>
-            <input type="text" id="blog-text" name="blogtext">
-
-            <input class="addFormButton" type="button" value="Add Blog Post">
-
-        </form>
-    </div>
-  
+        
+<!--  
     
+    BLOG POSTS      
+
+-->
+
+
+
+        <hr id="appendHere"> 
+
+            <details class="details">
+                <summary>Pics for Space   ||    Monday 3-31-2021</summary>
+                <hr class="summary-line"> 
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <img src="img/polaroid-burnt-multi.png">
+            </details>
+
+
+        
+
+        <hr class="hr-body"> 
+
+
+            <details>
+                <summary>Links for Outer Space    ||    Tuesday 4-1-2021</summary>
+                <hr class="summary-line"> 
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </details>
 
 
 
 
-    <hr id="appendHere"> 
+        <hr class="hr-body"> 
 
-    <details class="details">
-        <summary>Pics for Space   ||    Monday 3-31-2021</summary>
-        <hr class="summary-line"> 
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <img src="img/polaroid-burnt-multi.png">
-    </details>
-
-
-
-
-    
-
-    <hr class="hr-body"> 
-
-    <details>
-        <summary>Links for Outer Space    ||    Tuesday 4-1-2021</summary>
-        <hr class="summary-line"> 
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </details>
+            <details>
+                <summary>Objects in the Sky    ||    Wednesday 4-2-2021</summary>
+                <hr class="summary-line"> 
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </details>
 
 
 
 
+        <hr class="hr-body"> 
+
+            <details>
+                <summary>Are We Alone??    ||    Thursday 4-3-2021</summary>
+                <hr class="summary-line"> 
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </details>
 
 
+        
 
-    <hr class="hr-body"> 
+        <hr class="hr-body"> 
 
-    <details>
-        <summary>Objects in the Sky    ||    Wednesday 4-2-2021</summary>
-        <hr class="summary-line"> 
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </details>
-
-
-
-    <hr class="hr-body"> 
-
-    <details>
-        <summary>Are We Alone??    ||    Thursday 4-3-2021</summary>
-        <hr class="summary-line"> 
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </details>
-
-
-    
-
-
-
-
-    <hr class="hr-body"> 
-
-    <details>
-        <summary>Where All My Planets At?!   ||    Friday 4-4-2021</summary>
-        <hr class="summary-line"> 
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </details>
-    
-    
-    
-    <!-- multi view html tables
-    <table style="width:1000px;">
-        <tr>
-          <td align="center" width="50%"><iframe src="http://w3.org" style="width:500px;height:400px;"></iframe></td>
-          <td align="center" width="50%"><iframe src="http://w3.org" style="width:500px;height:400px;"></iframe></td>
-        </tr>
-        <tr>
-          <td align="center" width="50%"><iframe src="http://w3.org" style="width:500px;height:400px;"></iframe></td>
-          <td align="center" width="50%"><iframe src="http://w3.org" style="width:500px;height:400px;"></iframe></td>
-        </tr>
-    </table>
-    -->
-    
-</body>
+            <details>
+                <summary>Where All My Planets At?!   ||    Friday 4-4-2021</summary>
+                <hr class="summary-line"> 
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </details>
+            
+        
+        
+        <!-- multi view html tables
+        <table style="width:1000px;">
+            <tr>
+            <td align="center" width="50%"><iframe src="http://w3.org" style="width:500px;height:400px;"></iframe></td>
+            <td align="center" width="50%"><iframe src="http://w3.org" style="width:500px;height:400px;"></iframe></td>
+            </tr>
+            <tr>
+            <td align="center" width="50%"><iframe src="http://w3.org" style="width:500px;height:400px;"></iframe></td>
+            <td align="center" width="50%"><iframe src="http://w3.org" style="width:500px;height:400px;"></iframe></td>
+            </tr>
+        </table>
+        -->
+        
+    </body>

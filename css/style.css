@@ -1,35 +1,76 @@
-/* @font-face {
-    font-family: 'Permanent Marker', monospace;
-    src: url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
-  } */
+/*  
+*************************
 
-  @font-face {
+Font Family
+
+*************************
+*/
+
+
+
+@font-face {
     font-family: 'Alba Super', monospace;
     src: url("../ttf/ALBAS___.TTF");
-  }
-  
-  @font-face {
+}
+
+
+
+@font-face {
     font-family: 'Keep on Truckin';
     src: url("../ttf/KEEPT___.TTF");
-  }
- 
-  @font-face {
+}
+
+
+
+@font-face {
     font-family: 'albas2', monospace;
     src: url("../ttf/albas___-webfont.woff");
-  }
+}
 
-  @font-face {
+
+
+@font-face {
     font-family: 'alba_superregular';
     src: url('albas___-webfont.woff2') format('woff2'),
          url('albas___-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+
+
+
+/*  
+*************************
+
+Universal HTML Page
+
+*************************
+*/
+
+
 
 * {
     box-sizing: border-box;
 }
+
+
+
+/*  
+*************************
+
+Header/ NAV Bar
+
+*************************
+*/
+
+
+
+
+
+
+/*  add and search buttons */
+
+
 
 .buttonDiv {
     display: flex;
@@ -47,6 +88,7 @@
     transition-duration: 0.4s;
     padding: 0%;
     border: none;
+    margin: 0px 3px 0px 0px;
 }
 
 .addButton {
@@ -59,6 +101,7 @@
     transition-duration: 0.4s;
     padding:0%;
     border: none;
+    margin: 0px 0px 0px 3px;
 }
 
   
@@ -70,6 +113,17 @@
     font-size: 200%;
 }
 
+
+
+/*  search bar */
+
+
+@keyframes searchBarSlide {
+    from {margin: 20px 40px 20px 695px;}
+    to {margin: 20px 40px 20px 40px;}
+}
+
+
 form.searchBarClass {
     all: unset;
     background-color: #fee3f6;          
@@ -78,34 +132,55 @@ form.searchBarClass {
     font-family: 'Keep on Truckin', monospace;
     font-size: 24px;
     margin: 20px 40px;
-    
+    justify-content: space-evenly;    
+    animation-name: searchBarSlide;
+    animation-duration: 0.4s;      
 }
+
 
 input {
     all: unset;
     color: black;
     width: 90%;
-    
-    
 }
+
 
 ::placeholder {
     color: black;
     opacity: 0.7; 
-  }
+}
 
-  form.searchBarClass button {
+
+form.searchBarClass button {
     all:unset;
-    
-  }
 
-  form.searchBarClass i:hover {
+}
+
+form.searchBarClass i:hover {
     transition-duration: 0.4s;
     transform: scale(-1, 1);
-  }
 
-  form.addFormClass {
-    
+}
+
+
+ 
+/*  add form */
+
+@keyframes addFormVisibility {
+    from {
+        max-height: 0%;
+        max-width: 0%;        
+    }
+    to {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+
+form.addFormClass {
+    /* max-height: 0%;
+    max-width: 0%; */    
     background-color: #fee3f6;          
     border-radius: 30px;
     padding: 20px;
@@ -115,46 +190,109 @@ input {
     display: flex;
     flex-direction: column;    
     align-items: center;
-    justify-content: center;
-  }
+    justify-content: center;    
 
-  input[type=text] {
+
+    animation-name: formButtonTransition;    
+    animation-duration: 1s;
+}
+  
+
+input[type=text] {
+    /* max-height: 0%;
+    max-width: 0%; */
     font-family: 'Keep on Truckin', monospace;
-      margin: 15px 10px;
-      background-color: #fee3f6;
-      border-radius: 10px;
-      border: 5px solid black;
+    margin: 15px 10px;
+    background-color: #fee3f6;
+    border-radius: 10px;
+    border: 5px solid black;
+    padding: 10px;
+    height: 40px;
 
-      padding: 10px;
-      height: 40px;
-      
-  }
+    animation-name: formButtonTransition;
+    animation-duration: 1s;      
+}
 
-  input.addFormButton {
-      /* background: black; */
-      text-align: center;
-      font-size: 24px;
-      height: 75px;
-      width: 300px;
-      border-radius: 10px;
-      background-color: #fee3f6;
-      font-family: 'Alba Super', monospace;    
-      transition-duration: 0.4s;
-      padding:0%;
-      border: 5px solid black;
-      flex-grow: 1; 
-      flex-wrap: nowrap; 
-  }
 
-  input.addFormButton:hover {
-    font-size: 150%;
-  }
+input.addFormButton {
+    /*  max-height: 0%;
+    max-width: 0%; */
+    /* background: black; */
+    text-align: center;
+    font-size: 24px;
+    /* height: 75px;
+    width: 300px; */
+    border-radius: 10px;
+    background-color: #fee3f6;
+    font-family: 'Alba Super', monospace;    
+    transition-duration: 0.4s;
+    /* padding: 15px 32px; */
+    border: 5px solid black;
+    flex-grow: 1; 
+    flex-wrap: nowrap; 
+    /* margin: 15px 10px; */
+    
 
-  /* input.title {
-      width: 90%;
-      align-self: center;
-      
-  } */
+    height: 75px;
+    width: 150px;
+    border-radius: 10px;
+    
+    transition-duration: 0.4s;
+    padding: 0%;
+    /* border: none; */
+
+
+    animation-name: formButtonTransition;
+    animation-duration: 1s;
+}
+
+  
+#formButton {
+    padding: 15px 32px;
+    margin: none;    
+}
+
+
+input.addFormButton:hover {
+    /* max-height: 0%;
+    max-width: 0%; */
+    font-size: 125%;
+}
+
+
+input#title {
+    animation-name: formButtonTransition;
+    animation-duration: 1s;
+}
+
+
+input#blog-text {
+    animation-name: formButtonTransition;
+    animation-duration: 1s;
+}
+
+
+@keyframes addFormVisibilityText {
+    0%, 50% {visibility: hidden;} 
+    100% {visibility: visible;}
+}
+
+
+label {     
+    animation-name: formButtonTransition;
+    animation-duration: 1s;
+}
+
+
+ 
+
+/*  
+*************************
+
+Body
+
+*************************
+*/
 
 
 
@@ -171,8 +309,7 @@ body {
         inset #370617 0 0 0 28px,
 		inset #03071e 0 0 0 29px;        
     padding: 40px;  
-    background: #03071e;
-    
+    /* background: #03071e; */    
 }
 
 
@@ -180,9 +317,10 @@ body {
 header {
     max-width: 100%;    
     max-height: auto;
-    background-color: wheat;
-    
+    background-color: wheat;    
 }
+
+
 
 img {
     max-width: 100%;
@@ -190,48 +328,22 @@ img {
 }
 
 
+
 p {
-    margin: 0;
-    
+    margin: 0;    
 }
 
 
-h1 {
-    font-family: 'Permanent Marker', monospace;
-    font-size: 30px;
-    font-weight: 300;
-    padding-left: 5%;   
-    margin-top: 5px; 
-    /* 
-    text-shadow: -3px 3px 3px #03071E; 
-    */
-    color: #CED8F7;
-}
-
-h3 {
-    font-family: 'Permanent Marker', monospace;
-    font-weight: 300;
-    font-size: 20px;
-    padding-left: 10%;
-    color: #CED8F7;    
-}
-
-h4 {
-    margin: 0;
-}
 
 
-.blurb {
-    font-family: 'Permanent Marker', monospace;
-    margin: 0 40px;
-    background-image: url(../img/grid-background.jpg);
-    padding: 20px;
-}
+/*  blog posts */
+
 
 summary {
     font-family: 'Alba Super', monospace;
     font-size: 24px;
 }
+
 
 
 details {
@@ -240,9 +352,10 @@ details {
     /* background-image: url(../img/grid-background.jpg); */
     background-color: #fee3f6;
     padding: 20px;
-    border-radius: 10px;
-    
+    border-radius: 10px;    
 }
+
+
 
 details p {
     font-family: 'Keep on Truckin', monospace;
@@ -251,11 +364,18 @@ details p {
     letter-spacing: 2px;
 }
 
+
+
 .summary-line {
     background: linear-gradient(to right, red, yellow);
     height: 5px;
     border: none;
 }
+
+
+
+
+/*  hr tags */
 
 #appendHere, .hr-body {
     margin: 0;
@@ -263,10 +383,5 @@ details p {
 }
 
 
-/* .hr-body {
-    margin: 0;
-    border: none;
-}
- */
 
 

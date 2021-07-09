@@ -1,99 +1,62 @@
-/* let searchButton = document.getElementById("searchButton")
-let searchBar = document.getElementById("searchBar")
- */
-/* function displaySearchBar() {
+/*  
+*************************
+
+Search Button Function:
+
+Click search button to make search bar appear
+and disapear.
+
+*************************
+*/
 
 
-} */
-
-/* searchButton.addEventListener("click", function() {
-    if (searchBar.style.display === "none") {
-        searchBar.style.display = "block";
-    } else {
-        searchBar.style.display = "none";
-    }
-}) */
-
-/* function addSearchBar() {
-    let addSearchBar = document.getElementById("searchBar");
-  if (addSearchBar.style.display === "none") {
-    addSearchBar.style.display = "block";
-  } else {
-    addSearchBar.style.display = "none";
-  }
-} */
 
 let addSearchBar = document.getElementById("searchBar");
+let addSearchTransition = document.getElementById("test");
 
-document.getElementById("searchButton").addEventListener("click", function() {
-    
+document.getElementById("searchButton").addEventListener("click", function() {   
     if (addSearchBar.style.display === "none") {
-      addSearchBar.style.display = "flex";
+        addSearchBar.style.display = "flex";     
     } else {
       addSearchBar.style.display = "none";
     }
 });
 
 
-function submitSearch() {
-    
-    console.log( document.getElementById("query").value );
-    
+
+/*  
+*************************
+
+Search Bar Value:
+
+Collect and log search bar value
+in console.
+
+*************************
+*/
+
+function submitSearch() {    
+    console.log( document.getElementById("query").value );    
 }
 
 
 
-/* var tag = document.createElement("p");
-var text = document.createTextNode("Tutorix is the best e-learning platform");
-tag.appendChild(text);
-var element = document.getElementById("new");
-element.appendChild(tag);
+/*  
+*************************
 
+Add Button Function:
 
+Clicking add button makes html 
+form appear and disapear.
 
-document.getElementById("test").addEventListener("click", function() {
-    
-    var tag = document.createElement("p");
-    var text = document.createTextNode("Tutorix is the best e-learning platform");
-    tag.appendChild(text);
-    var element = document.getElementById("new");
-    element.appendChild(tag);
-    
-});
+Also styles the html form.
 
-function create(htmlStr) {
-    var frag = document.createDocumentFragment(),
-        temp = document.createElement('div');
-    temp.innerHTML = htmlStr;
-    while (temp.firstChild) {
-        frag.appendChild(temp.firstChild);
-    }
-    return frag;
-}
+***currently only adds an html details
+tag and styles the tag and child tags
+like summary***
 
-var fragment = create('<div>Hello!</div><p>...</p>');
-// You can use native DOM methods to insert the fragment:
-document.body.insertBefore(fragment, document.body.childNodes[0]); */
-
-
-/* document.getElementById("test").addEventListener("click", function() {
-    
-    document.getElementById("appendHere").innerHTML += "<details><summary>Pics for Space   ||    Monday 3-31-2021</summary><hr class="summary-line"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p></details>"
-
-}); */
-
-
-
-
-
-
-    /* const para = document.createElement("p");
-    const node = document.createTextNode("This is new.");
-    para.appendChild(node);
-
-    const element = document.getElementById("appendHere");
-    element.insertBefore(para);
-}); */
+*************************
+*/
 
 
 
@@ -144,9 +107,3 @@ document.getElementById("addButton").addEventListener("click", function() {
 
 
 
-{/* <form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname">
-</form> */}

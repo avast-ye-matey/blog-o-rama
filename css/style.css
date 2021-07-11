@@ -39,6 +39,14 @@ Font Family
 
 
 
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
+}
+
+
+
+
 /*  
 *************************
 
@@ -64,6 +72,18 @@ Header/ NAV Bar
 */
 
 
+.header {
+    position: sticky;
+    top: 0;
+    max-width: 100%;    
+    height: 100%;
+    background-color: #c9ada1;   
+    z-index: 999;
+    padding-top: 1px;
+    
+
+}
+
 
 
 
@@ -80,39 +100,76 @@ Header/ NAV Bar
 
 .searchButton {
     font-size: 24px;
+    
     height: 75px;
-    width: 150px;
-    border-radius: 10px;
-    background-color: #fee3f6;
-    font-family: 'Alba Super', monospace;    
+    width: 150px;    
+    font-family: 'Open Sans', monospace;    
     transition-duration: 0.4s;
     padding: 0%;
     border: none;
     margin: 0px 3px 0px 0px;
+    align-items: center;    
+    box-shadow:        
+        12px 12px 16px 0 #798478,
+        -8px -8px 12px 0 #c9ada1;
+    border-radius: 50px;
+    display: flex;    
+    justify-content: center;    
+    color: #4d6a6d;
+    /* font-weight: bold;    */
+    background-color:#fee3f6; 
+         
 }
 
-.addButton {
+
+@keyframes buttonClick {
+    from {box-shadow: 12px 12px 16px 0 #798478;}
+    to {box-shadow: inset 12px 12px 16px 0 #798478;}
+}
+.searchButton:active {
+    box-shadow: inset 12px 12px 16px 0 #798478;
+
+    
+    /* animation-name: buttonClick;
+    animation-duration: 1s;  */  
+        
+}
+
+
+.addButton {    
     font-size: 24px;
     height: 75px;
-    width: 150px;
-    border-radius: 10px;
-    background-color: #fee3f6;
-    font-family: 'Alba Super', monospace;    
+    width: 150px;    
+    font-family: 'Open Sans', monospace;    
     transition-duration: 0.4s;
-    padding:0%;
+    padding: 0%;
     border: none;
     margin: 0px 0px 0px 3px;
+    align-items: center;    
+    box-shadow:        
+        12px 12px 16px 0 #798478,
+        -8px -8px 12px 0 #c9ada1;
+    border-radius: 50px;
+    display: flex;    
+    justify-content: center;     
+    color: #4d6a6d;
+    /* font-weight: bold;    */
+    background-color:#fee3f6;
+}
+
+.addButton:active {
+    box-shadow: inset 12px 12px 16px 0 #798478;
 }
 
   
-.searchButton:hover {    
+/* .searchButton:hover {    
     font-size: 200%;    
 }
 
 .addButton:hover {    
     font-size: 200%;
 }
-
+ */
 
 
 /*  search bar */
@@ -126,29 +183,70 @@ Header/ NAV Bar
 
 form.searchBarClass {
     all: unset;
-    background-color: #fee3f6;          
+    background-color: #c9ada1;          
     border-radius: 30px;
     padding: 20px;
-    font-family: 'Keep on Truckin', monospace;
+    font-family: 'Open Sans', monospace;
     font-size: 24px;
+    /* font-weight: bold; */   
     margin: 20px 40px;
     justify-content: space-evenly;    
     animation-name: searchBarSlide;
-    animation-duration: 0.4s;      
+    animation-duration: 0.4s;     
+    box-shadow:        
+        12px 12px 16px 0 #798478,
+        -8px -8px 12px 0 #c9ada1; 
 }
 
 
 input {
     all: unset;
-    color: black;
+    color: #4d6a6d;
     width: 90%;
+    font-family: 'Open Sans', monospace;
+    font-size: 24px;
+    caret-color: transparent;
+    
 }
+
+input#query {
+    line-height: 1em;
+    margin-right: .5em;
+    
+    
+}
+
+input#query:focus {
+    background: #fee3f6;
+    border-radius: inherit;
+    text-indent: 1em;
+    box-shadow:        
+        7px 7px 16px 0 #798478,
+        -8px -8px 12px 0 #c9ada1; 
+    
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: unset;
+}
+
 
 
 ::placeholder {
-    color: black;
+    color: #4d6a6d;
     opacity: 0.7; 
+    z-index: auto;
 }
+
+input#query:focus::placeholder {
+    visibility: hidden;
+    cursor: none;
+}
+
+/* ::selection {
+    color: #fee3f6;
+    caret-color:
+  } */
 
 
 form.searchBarClass button {
@@ -161,6 +259,14 @@ form.searchBarClass i:hover {
     transform: scale(-1, 1);
 
 }
+
+.fa-search {
+    color: #4d6a6d;
+}
+
+
+
+
 
 
  
@@ -177,20 +283,99 @@ form.searchBarClass i:hover {
     }
 }
 
+@keyframes addForm {
+    0% {
+        max-height: 0px;
+        /* max-width: 0%;  */       
+    }
+    25% {
+        max-height: 25%;
+    }
+    50% {
+        max-height: 50%;
+    }
+    100% {
+        max-height: 100%;
+        /* max-width: 100%; */
+    }
+}
+.addFormClassDiv {
+    animation-name: addForm;
+    animation-duration: 3s;
+}
+
+
+/* @keyframes formButtonTransition {
+    0% {          
+      font-size: 0px;      
+      height: 0px;   
+    }
+    25% {
+      font-size: 0px;      
+    }
+
+    75% {      
+    }
+    100% {           
+      font-size: 24px;
+      height: 100%;      
+    }
+}
+
+@keyframes addFormButtonVisibilityText {
+    0%, 50% {font-size: 0px;} 
+    100% {font-size: 24px;}
+}
+
+input[value="Add Blog Post"] {
+    animation-name: addFormButtonVisibilityText;
+    animation-duration: 0.8s;
+
+} */
+
+
+
+
+
+
+/* font-size: 24px;
+    height: 75px;
+    width: 150px;    
+    font-family: 'Open Sans', monospace;    
+    transition-duration: 0.4s;
+    padding: 0%;
+    border: none;
+    margin: 0px 3px 0px 0px;
+    align-items: center;    
+    box-shadow:        
+        12px 12px 16px 0 #798478,
+        -8px -8px 12px 0 #c9ada1;
+    border-radius: 50px;
+    display: flex;    
+    justify-content: center;    
+    color: #4d6a6d;
+    font-weight: bold;   
+    background-color:#c9ada1;  */
+
 
 form.addFormClass {
     /* max-height: 0%;
     max-width: 0%; */    
-    background-color: #fee3f6;          
-    border-radius: 30px;
+    color: #4d6a6d;
+    background-color: #c9ada1;          
+    border-radius: 50px;
     padding: 20px;
-    font-family: 'Alba Super', monospace;
+    font-family: 'Open Sans', monospace;
     font-size: 24px;
     margin: 20px 40px;
     display: flex;
     flex-direction: column;    
     align-items: center;
-    justify-content: center;    
+    justify-content: center;   
+    
+    box-shadow:        
+        12px 12px 16px 0 #798478,
+        -8px -8px 12px 0 #c9ada1;
 
 
     animation-name: formButtonTransition;    
@@ -201,13 +386,17 @@ form.addFormClass {
 input[type=text] {
     /* max-height: 0%;
     max-width: 0%; */
-    font-family: 'Keep on Truckin', monospace;
+    font-family: 'Open Sans', monospace;
     margin: 15px 10px;
     background-color: #fee3f6;
     border-radius: 10px;
-    border: 5px solid black;
+    /* border: 5px solid black; */
     padding: 10px;
     height: 40px;
+
+    box-shadow:        
+        12px 12px 16px 0 #798478,
+        -8px -8px 12px 0 #c9ada1;
 
     animation-name: formButtonTransition;
     animation-duration: 1s;      
@@ -215,49 +404,87 @@ input[type=text] {
 
 
 input.addFormButton {
-    /*  max-height: 0%;
-    max-width: 0%; */
-    /* background: black; */
-    text-align: center;
-    font-size: 24px;
-    /* height: 75px;
-    width: 300px; */
-    border-radius: 10px;
-    background-color: #fee3f6;
-    font-family: 'Alba Super', monospace;    
-    transition-duration: 0.4s;
-    /* padding: 15px 32px; */
-    border: 5px solid black;
-    flex-grow: 1; 
-    flex-wrap: nowrap; 
-    /* margin: 15px 10px; */
     
 
+    padding: 0%;
+    border: none;
+    /* width: 100%; */
     height: 75px;
     width: 150px;
-    border-radius: 10px;
     
-    transition-duration: 0.4s;
-    padding: 0%;
-    /* border: none; */
+    text-align: center;
+    
+     
+    box-shadow:        
+        12px 12px 16px 0 #798478,
+        -8px -8px 12px 0 #c9ada1;
+    border-radius: 50px;
+    /* display: flex;  */   
+    /* justify-content: center;  */   
+    color: #4d6a6d;
+    
+    background-color:#c9ada1; 
 
 
     animation-name: formButtonTransition;
     animation-duration: 1s;
 }
 
+.addFormButton:active {
+    box-shadow: inset 12px 12px 16px 0 #798478;
+}
+
+textarea#story {
+    /* border-radius: inherit;
+    background-color: #fee3f6;
+    font-family: 'Alba Super', monospace;   */
+
+
+    color: #4d6a6d;
+    background-color: #fee3f6;          
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Open Sans', monospace;
+    font-size: 24px;
+    margin: 15px 10px;
+    /* display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;  */  
+    
+    box-shadow:        
+        12px 12px 16px 0 #798478,
+        -8px -8px 12px 0 #c9ada1;
+    border: none;
+    width: 93%;
+    height: 200px;
+    
+}
+
+textarea#story:focus {
+    outline: none;
+    caret-color: #fee3f6;
+    
+}
+
+textarea#story:focus::placeholder {
+    visibility: hidden;
+    
+}
+
   
-#formButton {
+/* #formButton {
     padding: 15px 32px;
     margin: none;    
-}
+} */
 
 
-input.addFormButton:hover {
+/* input.addFormButton:hover {
     /* max-height: 0%;
-    max-width: 0%; */
+    max-width: 0%; 
     font-size: 125%;
-}
+} 
+*/
 
 
 input#title {
@@ -279,8 +506,13 @@ input#blog-text {
 
 
 label {     
+    margin-top: 10px;
     animation-name: formButtonTransition;
     animation-duration: 1s;
+}
+
+label.blogText {
+    margin-top: 40px;
 }
 
 
@@ -296,29 +528,14 @@ Body
 
 
 
-body {    
-    box-shadow:
-		inset #ffba08 0 0 0 5px,
-		inset #faa307 0 0 0 1px,
-		inset #f48c06 0 0 0 10px,
-		inset #e85d04 0 0 0 11px,
-		inset #dc2f02 0 0 0 16px,
-		inset #d00000 0 0 0 17px,
-		inset #9d0208 0 0 0 22px,
-		inset #6a040f 0 0 0 23px,
-        inset #370617 0 0 0 28px,
-		inset #03071e 0 0 0 29px;        
-    padding: 40px;  
-    /* background: #03071e; */    
+body {
+    background-color: #c9ada1;
+    /* background-color: rgb(41, 32, 12); */
 }
 
 
 
-header {
-    max-width: 100%;    
-    max-height: auto;
-    background-color: wheat;    
-}
+
 
 
 
@@ -339,6 +556,110 @@ p {
 /*  blog posts */
 
 
+.post-title-and-date {
+    font-family: 'Open Sans', monospace;
+    margin: 20px 40px;
+    
+    /* background-color: #fee3f6; */
+    padding: 15px;
+    padding-left: 20px;
+    border-radius: 50px;  
+    box-shadow: 12px 12px 16px 0 #798478, -8px -8px 12px 0 #c9ada1;
+    /* display: flex; */
+}
+
+.post-title-and-date:hover {
+    cursor: pointer;
+}
+
+.p-title-and-date {
+    background-color: #c9ada1;
+}
+
+
+.blog-post {
+    flex-direction: column;
+    margin: 20px 20px 30px 20px;
+    
+    background-color: #fee3f6;
+    border-radius: 10px;  
+    color: #4d6a6d;
+    padding: 20px 15px 20px 20px;
+    box-shadow: 12px 12px 16px 0 #798478, -8px -8px 12px 0 #c9ada1;
+    
+    
+}
+
+.blog-post:hover {
+    cursor: text;
+}
+
+span {
+    
+    flex-direction: column;
+}
+
+h1, h2 {
+    margin: 0;
+    color: #4d6a6d;
+    font-weight: normal;
+
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 3px;
+    text-indent: 1em;
+}
+
+.blog-post-hr {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #4d6a6d, rgba(0, 0, 0, 0));
+    
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #c9ada1;
+    
+}
+
+#hr-body-footer {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 0;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #4d6a6d, rgba(0, 0, 0, 0));
+
+
+}
+
+main {
+    /* height: 100%; */
+    padding-bottom: 150px;
+}
+
+/* body {
+    height: calc( 100vh - var(--footer));
+} */
+
+
+/* p {
+    padding
+}
+ */
 summary {
     font-family: 'Alba Super', monospace;
     font-size: 24px;
@@ -382,6 +703,16 @@ details p {
     border: none;
 }
 
-
+#hrBody {
+    /* border-bottom: 1px solid #4d6a6d; */
+    /* visibility: hidden; */
+    /* background-color: #4d6a6d; */
+    /* border: 1px solid #4d6a6d; */
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #4d6a6d, rgba(0, 0, 0, 0));    
+}
 
 

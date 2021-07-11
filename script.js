@@ -10,7 +10,6 @@ and disapear.
 */
 
 
-
 let addSearchBar = document.getElementById("searchBar");
 let addSearchTransition = document.getElementById("test");
 
@@ -19,8 +18,36 @@ document.getElementById("searchButton").addEventListener("click", function() {
         addSearchBar.style.display = "flex";     
     } else {
       addSearchBar.style.display = "none";
-    }
+    }    
 });
+
+
+
+/*  
+*************************
+
+Open Close Blog Posts:
+
+Click each blog div element to change child span element
+from invisable to flex
+
+*************************
+*/
+
+
+
+document.querySelectorAll('.p-title-and-date-test').forEach(item => {
+    item.addEventListener('click', function() {
+        /* console.log(this.children[2]) */
+        if (this.children[2].style.display === "none") {
+            this.children[2].style.display = "flex";     
+        } else {
+            this.children[2].style.display = "none";
+        }  
+    })
+});
+
+
 
 
 
@@ -35,9 +62,10 @@ in console.
 *************************
 */
 
+
 function submitSearch() {    
     console.log( document.getElementById("query").value );    
-}
+};
 
 
 
@@ -102,8 +130,5 @@ document.getElementById("addButton").addEventListener("click", function() {
     /* container.body.appendParent(btn); */
     /* btn.insertAdjacentHTML( 'afterend', '<hr id="appendHere">' ); */
 });
-
-
-
 
 

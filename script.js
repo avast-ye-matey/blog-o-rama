@@ -38,15 +38,30 @@ from invisable to flex
 
 document.querySelectorAll('.p-title-and-date-test').forEach(item => {
     item.addEventListener('click', function() {
-        /* console.log(this.children[2]) */
+        
         if (this.children[2].style.display === "none") {
             this.children[2].style.display = "flex";     
         } else {
             this.children[2].style.display = "none";
         }  
     })
-});
+}); 
+ 
 
+function yallLostYourMind() {
+
+    document.querySelectorAll('.p-title-and-date-test').forEach(item => {
+        item.addEventListener('click', function() {
+            
+            if (this.children[2].style.display === "none") {
+                this.children[2].style.display = "flex";     
+            } else {
+                this.children[2].style.display = "none";
+            }  
+        })
+    }); 
+     
+}
 
 
 
@@ -88,47 +103,113 @@ like summary***
 
 
 
+let addFormClassDiv = document.getElementById("addFormClassDiv")
 document.getElementById("addButton").addEventListener("click", function() {
-    let newDetail = document.createElement("details");    
-    let newSummary = document.createElement("summary");
-    newSummary.textContent = "hello";
-    let newHr = document.createElement("hr");
-    let newP = document.createElement("p");
-    newP.textContent = "One Two Three Four";
-    let newHrTop = document.createElement("hr");
-
-    newDetail.innerHTML = document.getElementById("query").value;
-
-    newHrTop.style.border = "1px";
-    newHrTop.style.margin = "8px";
-       
     
-    newDetail.style.margin = "20px 40px";    
-    newDetail.style.background = "#fee3f6";
-    newDetail.style.padding = "20px";
-    newDetail.style.borderRadius =  "10px";
-
-
-    newHr.style.background = "linear-gradient(to right, red, yellow)";
-    newHr.style.height = "5px";
-    newHr.style.border = "none";
-    
-    /* btn.onclick = function () {
-        alert("Button is clicked");
-        }; */
-
-    /* newHrTop.append(newHrTop); */
-
-    document.body.appendChild(newHrTop);
-    
-    newDetail.append(newSummary, newHr, newP);
-
-
-    let container = document.getElementById("appendHere");
-    document.body.insertBefore( newDetail, container );
-    /* container.appendChild(btn); */
-    /* container.body.appendParent(btn); */
-    /* btn.insertAdjacentHTML( 'afterend', '<hr id="appendHere">' ); */
+    if (addFormClassDiv.style.display === "none") {
+        addFormClassDiv.style.display = "flex";     
+    } else {
+        addFormClassDiv.style.display = "none";
+    }    
 });
+
+
+
+
+
+
+
+
+//let addFormButton = document.getElementById("addFormButton");
+/* function submitAddForm() {  */   
+/* addFormButton.addEventListener("click", function() {
+    console.log( document.getElementById("title").value );  
+    console.log( document.getElementById("story").value );   */
+//});
+
+
+
+
+
+
+
+
+
+
+
+/* let appendHr = document.getElementById("hr-main-append"); */
+let mainElement = document.querySelector("main");
+/* let appendFormClassDiv= document.getElementById("addFormClassDiv"); */
+
+
+
+/* let titleValue = document.getElementById("title").value;
+let storyValue = document.getElementById("story").value;
+console.log( document.getElementsByTagName("input")[0].value );   
+console.log( document.getElementById("#story").value );  */  
+
+let findTitleOg = document.getElementById("title").value
+let findTextAreaOg = document.getElementById("story").value
+
+
+console.log( document.getElementById("title").value );
+console.log( document.getElementById("story").value );
+
+
+
+document.getElementById("addFormButton").addEventListener("click", function() {
+    
+
+    
+    let cloneThisElement= document.getElementById('post-title-and-date');
+
+    
+    let clonedElement = cloneThisElement.cloneNode(true);
+    console.log(clonedElement);   
+
+
+    console.log( document.getElementById("title").value );  
+    console.log( document.getElementById("story").value );
+
+    let findTitle = document.getElementById("title").value;
+    let findTextArea = document.getElementById("story").value;
+
+    
+
+
+    let h1NewInput1 = clonedElement.childNodes[1];
+    let h1NewInput2 = h1NewInput1.childNodes[1];
+    console.log( h1NewInput1 );
+    console.log( h1NewInput2 );
+    h1NewInput2.innerHTML = findTitle;
+    console.log (h1NewInput2)
+
+
+
+
+
+
+    let pNewInput = h1NewInput1.childNodes[5];
+    let pNewInput2 = pNewInput.childNodes[3];
+    let pNewInput3 = pNewInput2.childNodes[1]; 
+    pNewInput3.innerHTML = findTextArea;
+
+
+
+
+    
+    console.log( h1NewInput1.childNodes[3]);//dates
+
+
+    h1NewInput1.setAttribute( "onclick" , "yallLostYourMind()" );    
+
+
+    
+    mainElement.append(clonedElement);
+    addFormClassDiv.style.display = "none";
+   
+});
+
+
 
 

@@ -3,8 +3,8 @@
 
 Search Button Function:
 
-Click search button to make search bar appear
-and disapear.
+Click search button to make 
+search bar appear and disapear.
 
 *************************
 */
@@ -28,8 +28,8 @@ document.getElementById("searchButton").addEventListener("click", function() {
 
 Open Close Blog Posts:
 
-Click each blog div element to change child span element
-from invisable to flex
+Click each blog div element to 
+change child span element from invisable to flex
 
 *************************
 */
@@ -89,14 +89,10 @@ function submitSearch() {
 
 Add Button Function:
 
-Clicking add button makes html 
+Clicking add button makes HTML 
 form appear and disapear.
 
-Also styles the html form.
-
-***currently only adds an html details
-tag and styles the tag and child tags
-like summary***
+Also styles the HTML form.
 
 *************************
 */
@@ -114,67 +110,40 @@ document.getElementById("addButton").addEventListener("click", function() {
 });
 
 
+/*  
+*************************
+
+Add Post Button Function:
+
+Clicking Add Post button takes value from
+TITLE and TEXTAREA and creates a new DIV
+element in MAIN to show new post in HTML
+
+*************************
+*/
 
 
 
 
-
-
-//let addFormButton = document.getElementById("addFormButton");
-/* function submitAddForm() {  */   
-/* addFormButton.addEventListener("click", function() {
-    console.log( document.getElementById("title").value );  
-    console.log( document.getElementById("story").value );   */
-//});
-
-
-
-
-
-
-
-
-
-
-
-/* let appendHr = document.getElementById("hr-main-append"); */
 let mainElement = document.querySelector("main");
-/* let appendFormClassDiv= document.getElementById("addFormClassDiv"); */
-
-
-
-/* let titleValue = document.getElementById("title").value;
-let storyValue = document.getElementById("story").value;
-console.log( document.getElementsByTagName("input")[0].value );   
-console.log( document.getElementById("#story").value );  */  
-
-let findTitleOg = document.getElementById("title").value
-let findTextAreaOg = document.getElementById("story").value
-
+let findTitleOg = document.getElementById("title").value;
+let findTextAreaOg = document.getElementById("story").value;
 
 console.log( document.getElementById("title").value );
 console.log( document.getElementById("story").value );
 
 
-
-document.getElementById("addFormButton").addEventListener("click", function() {
-    
-
-    
-    let cloneThisElement= document.getElementById('post-title-and-date');
-
-    
+document.getElementById("addFormButton").addEventListener("click", function() {       
+    let cloneThisElement= document.getElementById('post-title-and-date');    
     let clonedElement = cloneThisElement.cloneNode(true);
-    console.log(clonedElement);   
 
+    console.log(clonedElement);   
 
     console.log( document.getElementById("title").value );  
     console.log( document.getElementById("story").value );
 
     let findTitle = document.getElementById("title").value;
-    let findTextArea = document.getElementById("story").value;
-
-    
+    let findTextArea = document.getElementById("story").value;    
 
 
     let h1NewInput1 = clonedElement.childNodes[1];
@@ -182,11 +151,7 @@ document.getElementById("addFormButton").addEventListener("click", function() {
     console.log( h1NewInput1 );
     console.log( h1NewInput2 );
     h1NewInput2.innerHTML = findTitle;
-    console.log (h1NewInput2)
-
-
-
-
+    console.log (h1NewInput2);
 
 
     let pNewInput = h1NewInput1.childNodes[5];
@@ -194,17 +159,11 @@ document.getElementById("addFormButton").addEventListener("click", function() {
     let pNewInput3 = pNewInput2.childNodes[1]; 
     pNewInput3.innerHTML = findTextArea;
 
-
-
-
     
-    console.log( h1NewInput1.childNodes[3]);//dates
+    console.log( h1NewInput1.childNodes[3]); //dates
 
-
-    h1NewInput1.setAttribute( "onclick" , "yallLostYourMind()" );    
-
-
-    
+    h1NewInput1.setAttribute( "onclick" , "yallLostYourMind()" );       
+        
     mainElement.append(clonedElement);
     addFormClassDiv.style.display = "none";
    

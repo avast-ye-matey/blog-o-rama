@@ -19,6 +19,10 @@ On the bottom of the form is an add post button. Click on it and the form disapp
 Built for mobile first. Everything is stacked (except icons but those are small enough to be horizontal) to create a better layout on a small screen
 but also to add focus on each blog post. The posts are also "closed" only showing title and date until the "button" is clicked and reveals the actual post. 
 
+!!!<br>
+As of now, after you add a new form to the page you have to click the post title twice to get the post to appear. The other posts still only need one click. So if new post doesn't open right away just click it again.<br>
+!!!
+
 
 
 # PROJECT REQUIREMENTS
